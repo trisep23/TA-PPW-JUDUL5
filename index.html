@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="calculator-wrapper">
+
+    <div class="display">
+        <div id="historySmall" class="history-small"></div>
+        <div id="displayNumber">0</div>
+
+        <button class="history-icon" onclick="toggleHistory()">
+            <i class="ri-history-line"></i>
+        </button>
+    </div>
+
+    <div id="historyPanel" class="history-panel">
+        <div id="historyList"></div>
+    </div>
+
+    <div class="buttons">
+        <button class="btn memory" onclick="memoryClear()">MC</button>
+        <button class="btn memory" onclick="memoryRecall()">MR</button>
+        <button class="btn memory" onclick="memoryAdd()">M+</button>
+        <button class="btn memory" onclick="memoryMinus()">M-</button>
+
+        <button class="btn operator" onclick="append('%')">%</button>
+        <button class="btn operator" onclick="clearEntry()">CE</button>
+        <button class="btn operator" onclick="allClear()">C</button>
+        <button class="btn operator" onclick="backspace()">⌫</button>
+
+        <button class="btn number" onclick="append('7')">7</button>
+        <button class="btn number" onclick="append('8')">8</button>
+        <button class="btn number" onclick="append('9')">9</button>
+        <button class="btn operator" onclick="append('/')">÷</button>
+
+        <button class="btn number" onclick="append('4')">4</button>
+        <button class="btn number" onclick="append('5')">5</button>
+        <button class="btn number" onclick="append('6')">6</button>
+        <button class="btn operator" onclick="append('*')">×</button>
+
+        <button class="btn number" onclick="append('1')">1</button>
+        <button class="btn number" onclick="append('2')">2</button>
+        <button class="btn number" onclick="append('3')">3</button>
+        <button class="btn operator" onclick="append('-')">−</button>
+
+        <button class="btn number" onclick="append('0')">0</button>
+        <button class="btn number" onclick="append('.')">.</button>
+        <button class="btn equal" onclick="calculate()">=</button>
+        <button class="btn operator" onclick="append('+')">+</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
